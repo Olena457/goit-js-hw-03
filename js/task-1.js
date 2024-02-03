@@ -1,7 +1,10 @@
-function makeTransaction(quantity, pricePerDroid) {
-  let totalPrice = quantity * pricePerDroid;
-  return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+// Оголоси функцію checkString(value), яка перевіряє
+// чи отримане значення є рядком і не містить символ $.
+// Якщо це так, виведіть кількість символів у рядку.
+// Якщо значення не є рядком, виведіть повідомлення про невірний ввід.
+function checkString(value) {
+  typeof value === 'string' && !value.includes('$')
+    ? console.log(` ${value.length}`)
+    : console.log('не коректно.');
 }
-console.log(makeTransaction(5, 3000)); // "You ordered 5 droids worth 15000 credits!"
-console.log(makeTransaction(3, 1000)); // "You ordered 3 droids worth 3000 credits!"
-console.log(makeTransaction(10, 500)); // "You ordered 10 droids worth 5000 credits!"
+checkString(34);

@@ -1,7 +1,14 @@
-function getShippingMessage(country, price, deliveryFee) {
-  const totalPrice = price + deliveryFee;
-  return `Shipping to ${country} will cost ${totalPrice} credits`;
+// Функція calculateEvenTotal(number) приймає ціле число (параметр number).
+//  Доповни код функції так, щоб вона повертала суму всіх парних цілих чисел від одиниці до цього числа включно.
+//  Парні числа — це ті, що можна поділити на 2 без остачі(як це зробити розглядалося у темі Арифметичні операції у модулі 1).
+//   Наприклад, якщо number дорівнює 6, то сума - це 2 + 4 + 6, тобто 12.
+
+function calculateEvenTotal(number) {
+  let sum = 0;
+  for (let i = 0; i <= number; i++) {
+    if (i % 2 === 0) {
+      sum += i;
+    }
+  }
+  return sum;
 }
-console.log(getShippingMessage('Australia', 120, 50)); // "Shipping to Australia will cost 170 credits"
-console.log(getShippingMessage('Germany', 80, 20)); // "Shipping to Germany will cost 100 credits"
-console.log(getShippingMessage('Sweden', 100, 20)); // "Shipping to Sweden will cost 120 credits"
